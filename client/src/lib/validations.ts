@@ -38,3 +38,20 @@ export const loginSchema = z.object({
 
 // The inferred type for the login form
 export type LoginFormValues = z.infer<typeof loginSchema>;
+
+//Invoice Schema
+export const invoiceSchema = z.object({
+  invoiceNumber: z.string().min(1, "Invoice number is required"),
+  dueDate: z.string().min(1, "Due date is required"),
+  status: z.string().min(1, "Status is required"),
+  clientId: z.string().min(1, "Client is required"),
+  items: z.array(
+    z.object({
+      description: z.string().min(1, "Description is required"),
+      quantity: z.number().min(1, "Quantity must be at least 1"),
+      unitPrice: z.number().min(0.01, "Unit price must be greater than 0"),
+    })
+  ).min(1, "At least one item is required"),
+});
+
+export type InvoiceFormData = z.infer<typeof invoiceSchema>;
