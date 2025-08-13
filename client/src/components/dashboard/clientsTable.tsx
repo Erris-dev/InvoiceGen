@@ -8,7 +8,7 @@ interface User {
   email: string;
   phone: string;
   invoices: number;
-  invoiceStatus: "Paid" | "Pending" | "Overdue";
+  invoiceStatus: "paid" | "pending" | "overdue";
 }
 
 interface UsersTableProps {
@@ -48,9 +48,9 @@ export const UsersTable: React.FC<UsersTableProps> = ({ users, onSendEmail }) =>
                 <span
                   className={`inline-block rounded-full px-3 py-1 text-xs font-semibold
                     ${
-                      invoiceStatus === "Paid"
+                      invoiceStatus === "paid"
                         ? "bg-green-100 text-green-800"
-                        : invoiceStatus === "Pending"
+                        : invoiceStatus === "pending"
                         ? "bg-yellow-100 text-yellow-800"
                         : "bg-red-100 text-red-800"
                     }

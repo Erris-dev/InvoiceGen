@@ -30,6 +30,10 @@ export const clientTypeDef = `#graphql
         address: String
         ): Client
 
+        sendRemainder(
+        clientId: ID!
+        ): String!
+
         deleteClient(id: ID!): Boolean!
     }
 `;

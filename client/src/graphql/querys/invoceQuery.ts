@@ -5,6 +5,12 @@ export const GET_MY_CLIENTS = gql`
     myClients {
       id
       name
+      email
+      phone
+      invoices {
+        id
+        status
+      }
     }
   }
 `;

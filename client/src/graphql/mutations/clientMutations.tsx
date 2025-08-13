@@ -11,3 +11,9 @@ export const CREATE_CLIENT = gql`
     }
   }
 `;
+
+export const SEND_EMAIL = gql`
+  mutation SendEmail($clientId: ID!) {
+    sendRemainder(clientId: $clientId)
+  }
+`;

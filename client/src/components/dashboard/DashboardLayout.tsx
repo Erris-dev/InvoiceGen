@@ -34,14 +34,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) =>
 
         {/* Navigation */}
         <nav className="flex-1 p-4 space-y-1">
-          <Link href="/dashboard">
-            <Button
-              variant="ghost"
-              className="w-full justify-start gap-2 text-neutral-300 hover:text-white hover:bg-neutral-800 transition"
-            >
-              <LayoutDashboard size={18} /> Overview
-            </Button>
-          </Link>
+
 
           {/* Clients menu with toggle */}
           <div>
@@ -84,14 +77,15 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) =>
             )}
           </div>
 
-          <Link href="/dashboard/settings">
+          <Link href="/dashboard/invoices/create">
             <Button
               variant="ghost"
               className="w-full justify-start gap-2 text-neutral-300 hover:text-white hover:bg-neutral-800 transition"
             >
-              <Settings size={18} /> Settings
+              🧾 Create Invoice
             </Button>
           </Link>
+
         </nav>
 
         {/* Footer */}

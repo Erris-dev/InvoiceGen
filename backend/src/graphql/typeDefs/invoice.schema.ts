@@ -8,7 +8,7 @@ export const invoiceTypeDef = `#graphql
     status: String!
     user: User!
     client: Client!
-    items: [InvoiceItem!]!
+    items: [InvoiceItem!]
     payments: [Payment!]!
   }
 
